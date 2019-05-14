@@ -1,3 +1,2 @@
 
-touch file01{02..10
-} 
+touch file01{02..10} 
