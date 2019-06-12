@@ -1,14 +1,11 @@
-#!/bin/bash
-cd $HOME /repo/unix1/
-git status
 while :
 do
     #git add/commit/pushの選択画面
     echo '1) git add -i'
-    echo '2) git commit -i'
-    echo '3) git push -i'
+    echo '2) git commit'
+    echo '3) git push' 
     echo '*) exit'
-    echo -n 'select?(1/2/3/*):'
+    echo -n 'select?(1/2/3/*) :'
     read select
     case "$select" in
         1)
@@ -20,6 +17,7 @@ do
             read comment
             git commit -m "$comment"
             git log --oneline
+            ;;
         3)
             git push
             ;;
